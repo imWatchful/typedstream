@@ -1,0 +1,63 @@
+{
+  "name": "@typedstream/core",
+  "version": "0.2.3",
+  "description": "Typed NDJSON streaming over fetch.",
+  "keywords": [
+    "streaming",
+    "ndjson",
+    "events",
+    "typed",
+    "async-iterator",
+    "realtime",
+    "http",
+    "sse-alternative"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "import": "./dist/client/index.js"
+    },
+    "./adapters/eventemitter": {
+      "types": "./dist/adapters/eventemitter.d.ts",
+      "import": "./dist/adapters/eventemitter.js"
+    },
+    "./adapters/source": {
+      "types": "./dist/adapters/source.d.ts",
+      "import": "./dist/adapters/source.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "typescript": "^5.5.0",
+    "typescript-eslint": "^8.57.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imWatchful/typedstream"
+  },
+  "license": "MIT"
+}
